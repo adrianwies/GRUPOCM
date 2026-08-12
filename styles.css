@@ -3082,6 +3082,10 @@ body.modal-open {
     touch-action: pan-y;
   }
 
+  .roll-stage:not(.mobile-3d-active) .thermal-roll-canvas canvas {
+    pointer-events: none;
+  }
+
   .mobile-3d-toggle {
     position: absolute;
     right: 14px;
@@ -3108,7 +3112,10 @@ body.modal-open {
   .mobile-3d-toggle.active { border-color: var(--orange); background: var(--orange); color: #fff; }
   .mobile-3d-toggle.active span { color: #fff; }
   .roll-stage.mobile-3d-active .thermal-roll-canvas,
-  .roll-stage.mobile-3d-active .thermal-roll-canvas canvas { touch-action: none; }
+  .roll-stage.mobile-3d-active .thermal-roll-canvas canvas {
+    touch-action: none;
+    pointer-events: auto;
+  }
 }
 
 /* Formulario de contacto — acabado editorial Grupo CM */
